@@ -1,0 +1,803 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: [space] 1fr [content] 10fr [space] 1fr;
+}
+
+.block-header {
+  font-family: "Lab Grotesque";
+  grid-area: content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  color: white;
+}
+
+.header-group1 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.header-group1__logo-text {
+  display: block;
+  width: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.header-group1__logo {
+  font-family: "Scania Sans CY";
+}
+
+.header-group2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.header-group2__btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #ffcf7a;
+  border-radius: 2px;
+  border: none;
+}
+
+.header-list {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 16px;
+}
+
+.page-camins {
+  color: white;
+  margin-top: 100px;
+}
+
+.block-camins {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-area: content;
+  margin-bottom: 250px;
+}
+
+.block-camins-info__header {
+  font-size: 64px;
+  font-family: "Lab Grotesque";
+  letter-spacing: 8px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+.block-camins-info__price {
+  font-size: 18px;
+  font-family: "Lab Grotesque";
+}
+.block-camins-info__price--big {
+  font-size: 40px;
+}
+
+.block-camins-image {
+  transform: translateX(-10%);
+}
+
+.svg-container {
+  display: flex;
+  gap: 30%;
+}
+
+.svg-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lab Grotesque";
+  font-size: 0.8em;
+  margin-top: 5em;
+}
+.svg-item__svg {
+  width: 3em;
+  height: 3em;
+}
+.svg-item--row {
+  flex-direction: row;
+}
+.svg-item--center-text {
+  text-align: center;
+}
+
+.page-fire {
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: "Lab Grotesque";
+  margin-bottom: 200px;
+}
+.page-fire__header {
+  grid-column: 1/12;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 60px;
+}
+.page-fire__text {
+  grid-column: 1/12;
+  text-align: center;
+  font-size: 20px;
+  word-wrap: break-word;
+  line-height: 33px;
+}
+.page-fire .page-fire-img {
+  position: relative;
+  grid-column: 1/12;
+  margin: 0 auto;
+  display: block;
+}
+.page-fire .page-fire-img .item-blur--big-blur {
+  top: 50%;
+  left: 30%;
+}
+.page-fire .page-fire-img .item-blur {
+  top: 50%;
+  left: 25%;
+}
+.page-fire .svg-items-list {
+  grid-column: 3/11;
+}
+
+.page-refuel {
+  font-family: "Lab Grotesque";
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(12, 1fr);
+}
+.page-refuel .text-summary {
+  grid-column: 3/6;
+}
+.page-refuel .visual-summary {
+  grid-column: 6/11;
+  position: relative;
+}
+.page-refuel .visual-summary .image-label {
+  position: absolute;
+  top: 150px;
+  right: 80px;
+}
+.page-refuel .visual-summary .image-with-label .item-blur {
+  top: 170px;
+  right: 90px;
+  width: 200px;
+}
+.page-refuel .visual-summary .refuel-svgs-block {
+  position: absolute;
+  top: 550px;
+}
+.page-refuel .visual-summary .circle-for-image {
+  position: absolute;
+  top: 385px;
+  left: 225px;
+}
+.page-refuel .visual-summary .circle-for-image--big {
+  top: 433px;
+  left: 306px;
+}
+.page-refuel .visual-summary .item-blur {
+  position: absolute;
+}
+
+.text-summary__header {
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.text-summary__text {
+  line-height: 33px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.page-smart-camin {
+  color: white;
+  font-family: "Lab Grotesque";
+}
+.page-smart-camin .header-with-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.page-smart-camin__text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 33px;
+}
+.page-smart-camin__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-etc {
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 100px;
+}
+.page-etc .left-part {
+  grid-column: 2/6;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.page-etc .right-part {
+  grid-column: 7/11;
+}
+
+.block-enum {
+  font-family: "Lab Grotesque";
+  margin-bottom: 37px;
+}
+.block-enum__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  margin-bottom: 25px;
+}
+.block-enum__text {
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.block-enum--margin-100 {
+  margin-top: 100px;
+}
+
+.page-catalog {
+  color: white;
+  text-align: center;
+  font-family: "Lab Grotesque";
+  margin-bottom: 95px;
+}
+.page-catalog__header {
+  font-size: 30px;
+  line-height: 44px;
+  vertical-align: top;
+}
+.page-catalog__button-and-blur {
+  position: relative;
+}
+.page-catalog__button-and-blur .item-blur {
+  right: 47%;
+  top: 10%;
+}
+
+.page-canvases {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  margin-bottom: 95px;
+  color: white;
+}
+.page-canvases__header {
+  grid-column: 2/12;
+  font-family: "Lab Grotesque";
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.page-canvases .block-canvases {
+  grid-column: 2/12;
+}
+
+.page-camin-calculator {
+  display: grid;
+  font-family: "Lab Grotesque";
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 90px;
+  color: white;
+}
+.page-camin-calculator__header {
+  grid-column: 2/12;
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 40px;
+}
+.page-camin-calculator .ui-content {
+  grid-column: 2/12;
+}
+
+.page-footer {
+  background-color: #121212;
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(12, 1fr);
+}
+.page-footer .footer {
+  grid-column: 2/12;
+}
+.page-footer .block-contacts {
+  grid-column: 2/12;
+  margin-bottom: 20px;
+}
+.page-footer .separator {
+  grid-column: 2/12;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr 4fr;
+  padding: 50px 0px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-nav__logo {
+  color: #fff;
+  font-family: "Scania Sans CY";
+}
+
+.helping-arrow {
+  border-bottom: 1px solid #fFCF7A;
+  width: 454px;
+  position: relative;
+}
+
+.helping-arrow::after {
+  display: block;
+  position: absolute;
+  right: -35px;
+  transform-origin: 0%;
+  transform: rotate(45deg);
+  content: "";
+  width: 35px;
+  border-bottom: 1px solid #fFCF7A;
+}
+
+.block-contacts {
+  font-family: "Lab Grotesque";
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  padding-top: 72px;
+  padding-bottom: 45px;
+}
+.block-contacts__header {
+  grid-column: 1/4;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+.button-contacts {
+  display: inline-block;
+  background: none;
+  font-family: "Lab Grotesque";
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.contact-way__name {
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-way__messenger {
+  font-size: 22px;
+}
+.contact-way__phone {
+  font-size: 36px;
+  line-height: 33px;
+}
+.contact-way__email {
+  margin-bottom: 85px;
+  font-size: 22px;
+}
+.contact-way__telegram {
+  font-size: 22px;
+}
+.contact-way__address {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.ui-content {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+.ui-content .ui-content-left {
+  grid-column: 1/6;
+}
+.ui-content .ui-content-right {
+  grid-column: 6/10;
+}
+.ui-content .ui-content-summary {
+  grid-column: 1/10;
+  grid-row: 2;
+}
+
+.ui-param__name {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 55px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.ui-param__value {
+  font-size: 28px;
+}
+.ui-param__color {
+  width: 28px;
+  height: 28px;
+  background-color: #b8542a;
+  border-radius: 50%;
+}
+
+.ui-component-hifens {
+  display: flex;
+  gap: 10px;
+  margin-left: 100px;
+}
+
+.hifen {
+  width: 30px;
+  border-bottom: 1px solid grey;
+}
+
+.hifen--colorful {
+  border-color: #fFCF7A;
+}
+
+.ui-additional-functions {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+.ui-additional-functions__header {
+  grid-column: 1/3;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 55px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ui-function {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.ui-function__name {
+  display: block;
+}
+.ui-function .checkbox {
+  margin-right: 100px;
+}
+
+.checkbox-button {
+  display: none;
+}
+
+.checkbox-button ~ .checkbox {
+  background: none;
+  border: 2px solid #ceb787;
+  color: transparent;
+}
+
+.checkbox-button:checked ~ .checkbox {
+  background-color: #ceb787;
+  content: "+";
+  color: #121212;
+}
+
+.pseudo-slider {
+  background: linear-gradient(90deg, #646464 0% 55%, #ffcf7a 55% 100%);
+  content: "";
+  min-width: 55%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  height: 3px;
+  border-radius: 2px;
+  position: relative;
+}
+.pseudo-slider__pin {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #ffcf7a;
+  top: -180%;
+  left: 55%;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+}
+.checkbox__content {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #1b1b1a;
+}
+
+.ui-component-slider {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: "Lab Grotesque";
+  margin-bottom: 20px;
+}
+.ui-component-slider__header {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.ui-component-panel-navigation {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.ui-content-summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-canvases {
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-canvas {
+  height: 267px;
+  width: 30%;
+  background-color: #121212;
+}
+
+.colorful-button {
+  border: none;
+  color: #121212;
+  padding: 30px;
+  background: radial-gradient(70% 70% at 10% 93.98%, #ff6752 0%, #f98b4d 50%, #eccf94 100%);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Lab Grotesque";
+}
+
+.block-canvas {
+  width: 80%;
+  background-color: #121212;
+  border-radius: 2px;
+  height: 346px;
+  position: relative;
+}
+.block-canvas .arrows {
+  bottom: 45px;
+  left: 40px;
+}
+
+.arrows {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+}
+.arrows__arrow--reverse {
+  transform: rotate(180deg);
+}
+
+.arrow--reverse {
+  transform: rotate(180deg);
+}
+
+.block-fuel-block {
+  font-family: "Lab Grotesque";
+  margin-bottom: 25px;
+}
+.block-fuel-block__header {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-family: "Lab Grotesque";
+  font-size: 24px;
+}
+
+.block-variantes {
+  margin-bottom: 50px;
+}
+.block-variantes__header {
+  font-family: "Lab Grotesque";
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.text-lists {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.text-lists__items {
+  font-family: "Lab Grotesque";
+  font-size: 14px;
+  line-height: 27px;
+}
+
+.header-with-separator {
+  font-size: 22px;
+}
+
+.image-label {
+  font-family: "Lab Grotesque";
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 4rem;
+  background: radial-gradient(100% 65.98% at 100% 73.18%, #ffffff 0%, #ffe2a4 50%, #ffd47c 100%);
+  display: inline-block;
+  height: 14rem;
+  width: 14rem;
+  color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image-label-text {
+  font-size: 12px;
+}
+.image-label-text__timelabel {
+  display: block;
+  font-size: 38px;
+  font-weight: bold;
+}
+.image-label-text__timetext {
+  font-size: 14px;
+  display: block;
+  font-weight: bold;
+}
+
+.circle-for-image {
+  content: "";
+  background: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ffd47c;
+}
+.circle-for-image--big {
+  width: 180px;
+  height: 180px;
+}
+
+.svg-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.refuel-svgs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.svg-items-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.svg-line-separator {
+  width: 40px;
+  content: "";
+  background-color: rgb(135, 135, 135);
+  height: 2px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.text--color {
+  color: #ffcf7a;
+}
+
+.text--gradient {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text--gradient-type1 {
+  background: -webkit-linear-gradient(180deg, #fff 30%, #555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text--gradient-type2 {
+  background: -webkit-linear-gradient(180deg, #fff 50%, #555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.item-blur {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f98b4d;
+  filter: blur(10rem);
+}
+.item-blur--big-blur {
+  width: 500px;
+  filter: blur(20rem);
+}
+
+.absolute-container {
+  position: relative;
+}
+
+@media screen and (max-width: 450px) {
+  .wrap {
+    display: block;
+  }
+  .block-camins {
+    display: flex;
+    flex-direction: column;
+  }
+  .block-camins-info__header {
+    font-size: 2.2em;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .block-camins-info__price {
+    font-size: x-small;
+  }
+  .block-camins-info__price--big {
+    font-size: 2.8em;
+  }
+  .page-camins .block-camins-info .svg-container {
+    transform: translateY(350px);
+  }
+  .block-camins-image {
+    transform: none;
+  }
+  .block-camins-image__img {
+    width: 100%;
+    height: 100%;
+  }
+  .page-fire {
+    display: block;
+    margin: 0 auto;
+  }
+  .page-fire .page-fire-img .item-blur--big-blur {
+    top: 50%;
+    left: 15%;
+  }
+  .page-fire .page-fire-img .item-blur {
+    top: 50%;
+    left: 15%;
+  }
+  .page-fire .page-fire-img__img {
+    height: 100%;
+    width: 100%;
+  }
+  .page-fire .svg-items-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=styles.css.map */
